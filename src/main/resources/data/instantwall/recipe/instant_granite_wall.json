@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "W",
+    "W"
+  ],
+  "key": {
+    "W": "minecraft:granite_wall"
+  },
+  "result": {
+    "id": "instantwall:instant_granite_wall",
+    "count": 1
+  }
+}

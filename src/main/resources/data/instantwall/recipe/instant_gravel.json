@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "GGG",
+    "GGG",
+    "GGG"
+  ],
+  "key": {
+    "G": "minecraft:gravel"
+  },
+  "result": {
+    "id": "instantwall:instant_gravel",
+    "count": 1
+  }
+}

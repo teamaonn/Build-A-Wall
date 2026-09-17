@@ -2,6 +2,7 @@ package com.joshua.instantwall;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
@@ -9,16 +10,22 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 /**
- * A compact bundle of two cobblestone walls. Using it on the top of a block
- * deploys the two vanilla wall blocks vertically and consumes one bundle.
+ * A compact bundle of blocks that deploys vertically from the top of a block.
  */
 public final class InstantWallItem extends Item {
-	public InstantWallItem(Properties properties) {
+	private final Block placedBlock;
+	private final int height;
+	private final boolean replaceWater;
+
+	public InstantWallItem(Properties properties, Block placedBlock, int height, boolean replaceWater) {
 		super(properties);
+		this.placedBlock = placedBlock;
+		this.height = height;
+		this.replaceWater = replaceWater;
 	}
 
 	@Override
@@ -28,25 +35,24 @@ public final class InstantWallItem extends Item {
 		}
 
 		Level level = context.getLevel();
-		BlockPos lowerPos = context.getClickedPos().above();
-		BlockPos upperPos = lowerPos.above();
+		BlockPos startPos = context.getClickedPos().above();
 
-		BlockState lowerState = level.getBlockState(lowerPos);
-		BlockState upperState = level.getBlockState(upperPos);
-
-		// Never destroy an existing block to make room for the wall.
-		if (!lowerState.isAir() || !upperState.isAir()) {
-			return InteractionResult.FAIL;
+		for (int i = 0; i < height; i++) {
+			BlockState targetState = level.getBlockState(startPos.above(i));
+			if (!canReplace(targetState)) {
+				return InteractionResult.FAIL;
+			}
 		}
 
 		if (!level.isClientSide()) {
-			BlockState wall = Blocks.COBBLESTONE_WALL.defaultBlockState();
+			BlockState placedState = placedBlock.defaultBlockState();
+			for (int i = 0; i < height; i++) {
+				level.setBlockAndUpdate(startPos.above(i), placedState);
+			}
 
-			level.setBlockAndUpdate(lowerPos, wall);
-			level.setBlockAndUpdate(upperPos, wall);
 			level.playSound(
 					null,
-					lowerPos,
+					startPos,
 					SoundEvents.STONE_PLACE,
 					SoundSource.BLOCKS,
 					1.0F,
@@ -60,5 +66,9 @@ public final class InstantWallItem extends Item {
 		}
 
 		return InteractionResult.SUCCESS;
+	}
+
+	private boolean canReplace(BlockState state) {
+		return state.isAir() || (replaceWater && state.getFluidState().is(FluidTags.WATER));
 	}
 }

@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "instantwall:item/instant_diorite_wall"
+  }
+}

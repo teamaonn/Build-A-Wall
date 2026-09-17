@@ -1,3 +1,26 @@
 {
-  "item.instantwall.instant_wall": "Instant Wall"
+  "item.instantwall.instant_wall": "Instant Wall",
+  "item.instantwall.instant_mossy_cobblestone_wall": "Instant Mossy Cobblestone Wall",
+  "item.instantwall.instant_stone_brick_wall": "Instant Stone Brick Wall",
+  "item.instantwall.instant_mossy_stone_brick_wall": "Instant Mossy Stone Brick Wall",
+  "item.instantwall.instant_granite_wall": "Instant Granite Wall",
+  "item.instantwall.instant_diorite_wall": "Instant Diorite Wall",
+  "item.instantwall.instant_andesite_wall": "Instant Andesite Wall",
+  "item.instantwall.instant_brick_wall": "Instant Brick Wall",
+  "item.instantwall.instant_sandstone_wall": "Instant Sandstone Wall",
+  "item.instantwall.instant_red_sandstone_wall": "Instant Red Sandstone Wall",
+  "item.instantwall.instant_nether_brick_wall": "Instant Nether Brick Wall",
+  "item.instantwall.instant_red_nether_brick_wall": "Instant Red Nether Brick Wall",
+  "item.instantwall.instant_end_stone_brick_wall": "Instant End Stone Brick Wall",
+  "item.instantwall.instant_blackstone_wall": "Instant Blackstone Wall",
+  "item.instantwall.instant_polished_blackstone_wall": "Instant Polished Blackstone Wall",
+  "item.instantwall.instant_polished_blackstone_brick_wall": "Instant Polished Blackstone Brick Wall",
+  "item.instantwall.instant_deepslate_brick_wall": "Instant Deepslate Brick Wall",
+  "item.instantwall.instant_deepslate_tile_wall": "Instant Deepslate Tile Wall",
+  "item.instantwall.instant_mud_brick_wall": "Instant Mud Brick Wall",
+  "item.instantwall.instant_tuff_wall": "Instant Tuff Wall",
+  "item.instantwall.instant_polished_tuff_wall": "Instant Polished Tuff Wall",
+  "item.instantwall.instant_tuff_brick_wall": "Instant Tuff Brick Wall",
+  "item.instantwall.instant_sand": "Instant Sand",
+  "item.instantwall.instant_gravel": "Instant Gravel"
 }

@@ -3,7 +3,7 @@
   "id": "instantwall",
   "version": "${version}",
   "name": "Instant Wall",
-  "description": "Carry two cobblestone walls as one button-sized bundle and deploy them instantly.",
+  "description": "Compact instant walls, sand columns, and gravel columns for Minecraft 26.2.",
   "authors": [
     "Joshua"
   ],

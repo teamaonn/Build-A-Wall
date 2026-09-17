@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "W",
+    "W"
+  ],
+  "key": {
+    "W": "minecraft:deepslate_brick_wall"
+  },
+  "result": {
+    "id": "instantwall:instant_deepslate_brick_wall",
+    "count": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "W",
+    "W"
+  ],
+  "key": {
+    "W": "minecraft:diorite_wall"
+  },
+  "result": {
+    "id": "instantwall:instant_diorite_wall",
+    "count": 1
+  }
+}
