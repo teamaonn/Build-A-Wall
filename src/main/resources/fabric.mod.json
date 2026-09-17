@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "instantwall",
+  "version": "${version}",
+  "name": "Instant Wall",
+  "description": "Carry two cobblestone walls as one button-sized bundle and deploy them instantly.",
+  "authors": [
+    "Joshua"
+  ],
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.joshua.instantwall.InstantWallMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
