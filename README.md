@@ -1,6 +1,6 @@
 # Instant Wall
 
-A tiny Fabric mod for Minecraft Java Edition 26.2 that turns common building materials into compact, instant vertical placements.
+A tiny Fabric mod for Minecraft Java Edition 26.3 that turns common building materials into compact, instant vertical placements.
 
 ## Wall items
 
@@ -39,7 +39,7 @@ Place either item on the top of a block to create a nine-block-tall vertical col
 
 ## Build on Windows
 
-This project targets Java 25, which Minecraft 26.2 requires.
+This project targets Java 25, which Minecraft 26.3 requires.
 
 From this folder, run:
 
@@ -50,10 +50,10 @@ C:\Gradle\bin\gradle.bat build
 The playable JAR will be created in:
 
 ```text
-build\libs\instant-wall-fabric-26.2-1.1.0.jar
+build\libs\instant-wall-fabric-26.3-1.1.1.jar
 ```
 
-Copy that JAR into your Minecraft `mods` folder. Fabric Loader and Fabric API for Minecraft 26.2 must also be installed.
+Copy that JAR into your Minecraft `mods` folder. Fabric Loader and Fabric API for Minecraft 26.3 must also be installed.
 
 ## Test commands
 

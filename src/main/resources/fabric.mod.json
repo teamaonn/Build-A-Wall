@@ -3,7 +3,7 @@
   "id": "instantwall",
   "version": "${version}",
   "name": "Instant Wall",
-  "description": "Compact instant walls, sand columns, and gravel columns for Minecraft 26.2.",
+  "description": "Compact instant walls, sand columns, and gravel columns for Minecraft 26.3.",
   "authors": [
     "Joshua"
   ],
@@ -16,7 +16,7 @@
   },
   "depends": {
     "fabricloader": ">=0.19.5",
-    "minecraft": "~26.2",
+    "minecraft": "~26.3",
     "java": ">=25",
     "fabric-api": "*"
   }
